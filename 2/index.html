@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@xyzsites | Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card-bg: rgba(28, 29, 34, 0.8);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #eef2f5;
+            /* Brand Colors */
+            --yt: #ff0000; --wa: #25d366; --ig: #f09433; --fb: #1877f2;
+            --x: #ffffff; --gh: #fafafa; --tk: #25f4ee; --th: #e34ba9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: radial-gradient(circle at top, #1a1c23 0%, var(--bg) 100%);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 2.5rem;
+            padding: 2.5rem 1.5rem;
+            border: 1px solid var(--border);
+            text-align: center;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(to right, #fff, #8e929b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag { color: #8e929b; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 2.5rem; text-transform: uppercase; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .tile {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tile i { font-size: 1.8rem; transition: transform 0.3s ease; }
+        .tile span { font-size: 0.85rem; font-weight: 500; opacity: 0.8; }
+
+        /* Hover & Active States */
+        .tile:active { transform: scale(0.95); }
+        
+        /* Individual Glowing Effects */
+        .youtube:hover { border-color: var(--yt); box-shadow: 0 0 15px rgba(255,0,0,0.2); }
+        .youtube i { color: var(--yt); }
+
+        .whatsapp:hover { border-color: var(--wa); box-shadow: 0 0 15px rgba(37,211,102,0.2); }
+        .whatsapp i { color: var(--wa); }
+
+        .instagram:hover { border-color: #fd1d1d; box-shadow: 0 0 15px rgba(253,29,29,0.2); }
+        .instagram i { color: #fd1d1d; }
+
+        .facebook:hover { border-color: var(--fb); box-shadow: 0 0 15px rgba(24,119,242,0.2); }
+        .facebook i { color: var(--fb); }
+
+        .twitter-x:hover { border-color: var(--x); }
+        .twitter-x i { color: var(--x); }
+
+        .github:hover { border-color: #6e5494; box-shadow: 0 0 15px rgba(110,84,148,0.2); }
+        .github i { color: var(--gh); }
+
+        .tiktok:hover { border-color: var(--tk); box-shadow: 0 0 15px rgba(37,244,238,0.2); }
+        .tiktok i { color: var(--tk); }
+
+        .threads:hover { border-color: var(--th); box-shadow: 0 0 15px rgba(227,75,169,0.2); }
+        .threads i { color: var(--th); }
+
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.75rem;
+            color: #555;
+            font-family: monospace;
+        }
+
+        @media (max-width: 350px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>@xyzsites</h1>
+            <div class="tag">Connect with me</div>
+        </div>
+
+        <div class="grid">
+            <a href="https://youtube.com/@xyzsites" target="_blank" class="tile youtube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="https://whatsapp.com/channel/..." target="_blank" class="tile whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/..." target="_blank" class="tile instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/..." target="_blank" class="tile facebook">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://twitter.com/xyzsites" target="_blank" class="tile twitter-x">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span>X</span>
+            </a>
+            <a href="https://github.com/xyzsites" target="_blank" class="tile github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://tiktok.com/@xyzsites" target="_blank" class="tile tiktok">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+            <a href="https://www.threads.net/@xyzsites" target="_blank" class="tile threads">
+                <i class="fa-brands fa-threads"></i>
+                <span>Threads</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <i class="fas fa-terminal"></i> server@xyzsites
+        </div>
+    </div>
+
+</body>
+</html>
+
+
